@@ -76,9 +76,24 @@ int enterDataForCropTable(GlobalInfo *info){
         return ERROR;
     }
     
+    // First crop info
     info->croptable.cp[0].crop_id = 101;
     strcpy(info->croptable.cp[0].crop_name,"test");
     info->croptable.cp[0].crop_output=0;
+    info->croptable.cp[0].deathdays=3;
+    info->croptable.cp[0].returnStage=2;
+    info->croptable.cp[0].seedstage_days=1;
+    strcpy(info->croptable.cp[0].seedstage_picpath,"./test");
+    
+    info->croptable.cp[0].stage1_days=2;
+    strcpy(info->croptable.cp[0].stage1_picpath,"./test_stage1");
+    
+    info->croptable.cp[0].stage2_days=2;
+    strcpy(info->croptable.cp[0].stage2_picpath,"./test_stage2");
+    
+    info->croptable.cp[0].stage3_days=2;
+    strcpy(info->croptable.cp[0].stage3_picpath,"./test_stage3");
+    // Second crop info
     
     
     return SUCCESS;
