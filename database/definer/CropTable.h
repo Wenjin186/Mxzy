@@ -8,8 +8,7 @@
 
 #ifndef CropTable_h
 #define CropTable_h
-
-#define CROPTABLE_MAX 3
+#define CROPTABLE_MAX 5
 #define CROPNAME_LENGTH 30
 #define CROPSTAGE_LENGTH 50
 

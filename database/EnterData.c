@@ -77,6 +77,9 @@ int enterDataForCropTable(GlobalInfo *info){
     }
     
     info->croptable.cp[0].crop_id = 101;
+    strcpy(info->croptable.cp[0].crop_name,"test");
+    info->croptable.cp[0].crop_output=0;
+    
     
     return SUCCESS;
 }
