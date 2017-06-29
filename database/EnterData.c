@@ -83,7 +83,7 @@ int enterDataForCropTable(GlobalInfo *info){
     if (info == NULL) {
         return ERROR;
     }
-    
+      
     //茄子种子的信息
     info->croptable.cp[0].crop_id = 101; //茄子种子的id是101
     //strcpy(info->croptable.cp[0].crop_name,"test");
