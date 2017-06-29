@@ -59,6 +59,7 @@ int getToolsBagCapacity(GlobalInfo *info, int bag_level);
 GoodsDetail *getGoodsDetailById(GlobalInfo *info, int goods_id);
 //得到ToolDetail
 ToolDetail  *getToolDetailById(GlobalInfo *info, int tool_id);
-
+//通过goods_id得到Crop 农作物信息
+Crop *getCropById(GlobalInfo *info, int goods_id);
 
 #endif /* MxzyDatabase_h */

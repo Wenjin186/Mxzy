@@ -12,9 +12,16 @@
 #define CROPNAME_LENGTH 30
 #define CROPSTAGE_LENGTH 50
 
+
+#define SPRING 1
+#define SUMMER 2
+#define FALL 3
+#define WINTER 4
+
 typedef struct crop{
     int crop_id;
-    char crop_name[CROPNAME_LENGTH];
+    //char crop_name[CROPNAME_LENGTH];
+    int crop_season;
     int seedstage_days;
     char seedstage_picpath[CROPSTAGE_LENGTH];
     int stage1_days;
@@ -24,8 +31,10 @@ typedef struct crop{
     int stage3_days;
     char stage3_picpath[CROPSTAGE_LENGTH];
     int returnStage;
-    int crop_output;
+    int crop_basic_output;
+    int crop_high_output;
     int deathdays;
+    int goods_id;
 }Crop;
 
 typedef struct crop_table{

@@ -13,13 +13,21 @@ int enterDataForAllGoodsInfo(GlobalInfo *info){
         return ERROR;
     }
     
-    //输入茄子信息
+    //输入茄子种子信息
     info->allgoods_info.detail[0].goods_id = 101;
     info->allgoods_info.detail[0].goods_max = 30;
     info->allgoods_info.detail[0].purchase_price = 300;
     info->allgoods_info.detail[0].sell_price = 200;
-    strcpy(info->allgoods_info.detail[0].goods_name, "eggplant");
-    info->allgoods_info.detail[0].goods_type = 0; //???
+    strcpy(info->allgoods_info.detail[0].goods_name, "eggplant seed");
+    info->allgoods_info.detail[0].goods_type = GOODSTYPE_SEED; //???
+    //输入对应茄子信息
+    info->allgoods_info.detail[1].goods_id = 301;
+    info->allgoods_info.detail[1].goods_max = 30;
+    info->allgoods_info.detail[1].purchase_price = 450;
+    info->allgoods_info.detail[1].sell_price = 400;
+    strcpy(info->allgoods_info.detail[1].goods_name, "eggplant");
+    info->allgoods_info.detail[1].goods_type = GOODSTYPE_GROWN;
+    
     
     
     return SUCCESS;
@@ -76,9 +84,20 @@ int enterDataForCropTable(GlobalInfo *info){
         return ERROR;
     }
     
-    info->croptable.cp[0].crop_id = 101;
-    strcpy(info->croptable.cp[0].crop_name,"test");
-    info->croptable.cp[0].crop_output=0;
+    //茄子种子的信息
+    info->croptable.cp[0].crop_id = 101; //茄子种子的id是101
+    //strcpy(info->croptable.cp[0].crop_name,"test");
+    info->croptable.cp[0].crop_season = SPRING;
+    info->croptable.cp[0].seedstage_days = 2; //种子阶段需要两天
+    strcpy(info->croptable.cp[0].seedstage_picpath, "eggplant_seed.png"); //种子阶段图片路径
+    info->croptable.cp[0].stage1_days = 2;
+    strcpy(info->croptable.cp[0].stage1_picpath, "eggplant_stage1.png"); //阶段1图片路径
+    info->croptable.cp[0].returnStage = 1; //返回阶段1
+    info->croptable.cp[0].crop_basic_output = 2; //最低产值
+    info->croptable.cp[0].crop_high_output = 3;  //最高产值
+    info->croptable.cp[0].deathdays = 5; // 未浇水死亡天数
+    info->croptable.cp[0].goods_id = 301; //茄子的ID
+    
     
     
     return SUCCESS;

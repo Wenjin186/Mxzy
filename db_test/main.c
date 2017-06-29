@@ -130,12 +130,18 @@ void readGlobalInfo(){
     
     GoodsDetail *d = getGoodsDetailById(info, 101);
     printf("Goods name is %s\n", d->goods_name);
+    if (d->goods_type == GOODSTYPE_SEED) {
+        Crop *cp = getCropById(info, d->goods_id);
+        printf("Seed's basic output is %d\n", cp->crop_basic_output);
+    }
+    
     
     ToolDetail *tool = getToolDetailById(info, 11);
     printf("Tool name is %s\n", tool->tool_name);
     
     int tb_capacity = getToolsBagCapacity(info, 3);
     printf("ToolsBag capacity is %d\n", tb_capacity);
+    
     
     freeGlobalInfo(info);
     closeGlobalInfoFile(fp);
@@ -169,8 +175,9 @@ void simulateStartGame(){
     
     printf("Character's name is %s\n", getCharacterName(row));
     
-    toWriteData(fp, table);
     
+    
+    toWriteData(fp, table);
     freeCharacterTable(table);
     closeLocalStorage(fp);
 }
@@ -180,9 +187,9 @@ int main(int argc, const char * argv[]) {
     //mxzyRead();
     //getCharacterData();
     //mxzyWrite();
-    //writeGlobalInfo();
-    //readGlobalInfo();
-    simulateStartGame();
+    writeGlobalInfo();
+    readGlobalInfo();
+    //simulateStartGame();
     return 0;
 }
 

@@ -160,6 +160,7 @@ void enterGlobalInfoDataBeforeSaving(GlobalInfo *info){
     enterDataForGoodsBagInfo(info);
     enterDataForAllToolsInfo(info);
     enterDataForToolsBagInfo(info);
+    enterDataForCropTable(info);
 };
 void freeGlobalInfo(GlobalInfo *info){
     if (info == NULL) {
@@ -238,6 +239,19 @@ ToolDetail  *getToolDetailById(GlobalInfo *info, int tool_id){
     for (int i = 0; i<ALLTOOLSINFO_MAX; i++) {
         if (info->alltools_info.detail[i].tool_id == tool_id)
             return &info->alltools_info.detail[i];
+    }
+    return NULL;
+}
+Crop *getCropById(GlobalInfo *info, int goods_id){
+    if (info == NULL) {
+        printf("GlobalInfo cannot be NULL\n");
+        return NULL;
+    }
+    
+    for (int i = 0; i<CROPTABLE_MAX; i++) {
+        if (info->croptable.cp[i].crop_id == goods_id) {
+            return &info->croptable.cp[i];
+        }
     }
     return NULL;
 }

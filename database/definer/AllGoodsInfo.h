@@ -10,7 +10,10 @@
 #define define_allgoodsinfo_h
 
 #define GOODSNAME_LENGTH 128
-#define ALLGOODSINFO_MAX 10
+#define ALLGOODSINFO_MAX 100
+
+#define GOODSTYPE_SEED 1
+#define GOODSTYPE_GROWN 2
 
 typedef struct goods_detail{
     int goods_id;
