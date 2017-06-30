@@ -160,7 +160,8 @@ void enterGlobalInfoDataBeforeSaving(GlobalInfo *info){
     enterDataForGoodsBagInfo(info);
     enterDataForAllToolsInfo(info);
     enterDataForToolsBagInfo(info);
-    enterDataForCropTable(info);
+    //enterDataForCropTable(info);
+    enterDataForSpring(info);
 };
 void freeGlobalInfo(GlobalInfo *info){
     if (info == NULL) {
@@ -255,5 +256,47 @@ Crop *getCropById(GlobalInfo *info, int goods_id){
     }
     return NULL;
 }
+Seed *getSeedById(void *sstable, int season, int goods_id){
+    if (sstable == NULL) {
+        printf("Sstable cannot be NULL\n");
+        return NULL;
+    }
+    
+    
+    if (season == SPRING){
+        for (int i = 0; i<SPRINGSEEDTABLE_MAX; i++) {
+            if( ((SpringSeedTable*)sstable)->sd[i].seed_id == goods_id)
+                return &((SpringSeedTable*)sstable)->sd[i];
+        }
+    }
+    else if (season == SUMMER)
+        return NULL;
+    else if (season == FALL)
+        return NULL;
+    else if (season == WINTER)
+        return NULL;
+    
+    return NULL;
+}
+void *getSeasonSeedTable(GlobalInfo *info, int season){
+    if (info == NULL) {
+        printf("GlobalInfo cannot be NULL\n");
+        return NULL;
+    }
+    if (season == SPRING)
+        return &info->spring.sstable;
+    
+    if (season == SUMMER)
+        return NULL;
+    
+    if (season == FALL)
+        return NULL;
+    
+    if (season == WINTER)
+        return NULL;
+    
+    return NULL;
+}
+
 
 

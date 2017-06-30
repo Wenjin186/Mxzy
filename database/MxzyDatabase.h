@@ -47,7 +47,7 @@ void initGlobalInfo(GlobalInfo **info);
 void freeGlobalInfo(GlobalInfo *info);
 int toWriteGlobalInfo(FILE *fp, GlobalInfo *info);
 int toReadGlobalInfo(FILE *fp, GlobalInfo *info);
-              //通过GlobalInfo获取的属性
+//通过GlobalInfo获取的属性
 
 void enterGlobalInfoDataBeforeSaving(GlobalInfo *info);
 
@@ -59,7 +59,12 @@ int getToolsBagCapacity(GlobalInfo *info, int bag_level);
 GoodsDetail *getGoodsDetailById(GlobalInfo *info, int goods_id);
 //得到ToolDetail
 ToolDetail  *getToolDetailById(GlobalInfo *info, int tool_id);
+//通过goods_id得到Seed农作物信息
+Seed *getSeedById(void *sstable, int season, int goods_id);
+//得到季节种子表
+void *getSeasonSeedTable(GlobalInfo *info, int season);
+
+
 //通过goods_id得到Crop 农作物信息
 Crop *getCropById(GlobalInfo *info, int goods_id);
-
 #endif /* MxzyDatabase_h */

@@ -14,6 +14,7 @@
 #include "AllToolsInfo.h"
 #include "ToolsBagInfo.h"
 #include "CropTable.h"
+#include "Spring.h"
 
 typedef struct global_info{
     AllGoodsInfo allgoods_info;
@@ -21,6 +22,7 @@ typedef struct global_info{
     AllToolsInfo alltools_info;
     ToolsBagInfo toolsbag_info;
     CropTable croptable;
+    Spring spring;
 }GlobalInfo;
 
 

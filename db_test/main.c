@@ -131,8 +131,9 @@ void readGlobalInfo(){
     GoodsDetail *d = getGoodsDetailById(info, 101);
     printf("Goods name is %s\n", d->goods_name);
     if (d->goods_type == GOODSTYPE_SEED) {
-        Crop *cp = getCropById(info, d->goods_id);
-        printf("Seed's basic output is %d\n", cp->crop_basic_output);
+        void *sstable = getSeasonSeedTable(info, SPRING);
+        Seed *sd = getSeedById(sstable, SPRING, d->goods_id);
+        printf("Seed's basic output is %d\n", sd->seed_basic_output);
     }
     
     

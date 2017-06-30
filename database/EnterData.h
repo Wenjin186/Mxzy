@@ -23,6 +23,7 @@ int enterDataForGoodsBagInfo(GlobalInfo *info);
 int enterDataForAllToolsInfo(GlobalInfo *info);
 int enterDataForToolsBagInfo(GlobalInfo *info);
 int enterDataForCropTable(GlobalInfo *info);
+int enterDataForSpring(GlobalInfo *info);
 
 
 
