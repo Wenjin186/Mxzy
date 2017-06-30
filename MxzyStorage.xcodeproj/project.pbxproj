@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC340DB11F060EE300BCD4F0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BC340DB01F060EE300BCD4F0 /* main.c */; };
-		BC340DB51F060EEA00BCD4F0 /* libMxzyStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC37740A1F04B5AB008DA070 /* libMxzyStorage.a */; };
 		BC3774221F04B5C5008DA070 /* AllGoodsInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3774131F04B5C5008DA070 /* AllGoodsInfo.h */; };
 		BC3774231F04B5C5008DA070 /* AllToolsInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3774141F04B5C5008DA070 /* AllToolsInfo.h */; };
 		BC3774241F04B5C5008DA070 /* CharacterRow.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3774151F04B5C5008DA070 /* CharacterRow.h */; };
@@ -22,10 +20,12 @@
 		BC37742C1F04B5C5008DA070 /* EnterData.h in Headers */ = {isa = PBXBuildFile; fileRef = BC37741D1F04B5C5008DA070 /* EnterData.h */; };
 		BC37742D1F04B5C5008DA070 /* MxzyDatabase.c in Sources */ = {isa = PBXBuildFile; fileRef = BC37741E1F04B5C5008DA070 /* MxzyDatabase.c */; };
 		BC37742E1F04B5C5008DA070 /* MxzyDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = BC37741F1F04B5C5008DA070 /* MxzyDatabase.h */; };
+		BC9681C71F06109700D0EAEB /* libMxzyStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC37740A1F04B5AB008DA070 /* libMxzyStorage.a */; };
+		BC9681C81F06109C00D0EAEB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BC340DB01F060EE300BCD4F0 /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BC340DAC1F060EE300BCD4F0 /* CopyFiles */ = {
+		BC9681BE1F06108100D0EAEB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -38,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		BC340DA91F060DEE00BCD4F0 /* Spring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
-		BC340DAE1F060EE300BCD4F0 /* db_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = db_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC340DB01F060EE300BCD4F0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		BC37740A1F04B5AB008DA070 /* libMxzyStorage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMxzyStorage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC3774131F04B5C5008DA070 /* AllGoodsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllGoodsInfo.h; sourceTree = "<group>"; };
@@ -54,21 +53,22 @@
 		BC37741D1F04B5C5008DA070 /* EnterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterData.h; sourceTree = "<group>"; };
 		BC37741E1F04B5C5008DA070 /* MxzyDatabase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxzyDatabase.c; sourceTree = "<group>"; };
 		BC37741F1F04B5C5008DA070 /* MxzyDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxzyDatabase.h; sourceTree = "<group>"; };
+		BC9681C01F06108100D0EAEB /* db_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = db_test; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BC340DAB1F060EE300BCD4F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC340DB51F060EEA00BCD4F0 /* libMxzyStorage.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BC3774071F04B5AB008DA070 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9681BD1F06108100D0EAEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9681C71F06109700D0EAEB /* libMxzyStorage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				BC37740A1F04B5AB008DA070 /* libMxzyStorage.a */,
-				BC340DAE1F060EE300BCD4F0 /* db_test */,
+				BC9681C01F06108100D0EAEB /* db_test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,23 +170,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BC340DAD1F060EE300BCD4F0 /* db_test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC340DB21F060EE300BCD4F0 /* Build configuration list for PBXNativeTarget "db_test" */;
-			buildPhases = (
-				BC340DAA1F060EE300BCD4F0 /* Sources */,
-				BC340DAB1F060EE300BCD4F0 /* Frameworks */,
-				BC340DAC1F060EE300BCD4F0 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = db_test;
-			productName = db_test;
-			productReference = BC340DAE1F060EE300BCD4F0 /* db_test */;
-			productType = "com.apple.product-type.tool";
-		};
 		BC3774091F04B5AB008DA070 /* MxzyStorage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC37740E1F04B5AB008DA070 /* Build configuration list for PBXNativeTarget "MxzyStorage" */;
@@ -204,6 +187,23 @@
 			productReference = BC37740A1F04B5AB008DA070 /* libMxzyStorage.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		BC9681BF1F06108100D0EAEB /* db_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC9681C41F06108100D0EAEB /* Build configuration list for PBXNativeTarget "db_test" */;
+			buildPhases = (
+				BC9681BC1F06108100D0EAEB /* Sources */,
+				BC9681BD1F06108100D0EAEB /* Frameworks */,
+				BC9681BE1F06108100D0EAEB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = db_test;
+			productName = db_test;
+			productReference = BC9681C01F06108100D0EAEB /* db_test */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,11 +213,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Wenjin Zhang";
 				TargetAttributes = {
-					BC340DAD1F060EE300BCD4F0 = {
+					BC3774091F04B5AB008DA070 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
-					BC3774091F04B5AB008DA070 = {
+					BC9681BF1F06108100D0EAEB = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -236,20 +236,12 @@
 			projectRoot = "";
 			targets = (
 				BC3774091F04B5AB008DA070 /* MxzyStorage */,
-				BC340DAD1F060EE300BCD4F0 /* db_test */,
+				BC9681BF1F06108100D0EAEB /* db_test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BC340DAA1F060EE300BCD4F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC340DB11F060EE300BCD4F0 /* main.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BC3774061F04B5AB008DA070 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,23 +251,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BC9681BC1F06108100D0EAEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9681C81F06109C00D0EAEB /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BC340DB31F060EE300BCD4F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		BC340DB41F060EE300BCD4F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		BC37740C1F04B5AB008DA070 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -379,17 +365,23 @@
 			};
 			name = Release;
 		};
+		BC9681C51F06108100D0EAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC9681C61F06108100D0EAEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC340DB21F060EE300BCD4F0 /* Build configuration list for PBXNativeTarget "db_test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC340DB31F060EE300BCD4F0 /* Debug */,
-				BC340DB41F060EE300BCD4F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		BC3774051F04B5AB008DA070 /* Build configuration list for PBXProject "MxzyStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -407,6 +399,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BC9681C41F06108100D0EAEB /* Build configuration list for PBXNativeTarget "db_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9681C51F06108100D0EAEB /* Debug */,
+				BC9681C61F06108100D0EAEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

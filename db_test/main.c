@@ -121,10 +121,10 @@ void readGlobalInfo(){
     initGlobalInfo(&info);
     toReadGlobalInfo(fp, info);
     
-//    printf("eggplat id is %d\n", info->allgoods_info.d1.goods_id);
-//    printf("eggplat name is %s\n", info->allgoods_info.d1.goods_name);
-//    printf("eggplat purchase price is %lf\n", info->allgoods_info.d1.purchase_price);
-
+    //    printf("eggplat id is %d\n", info->allgoods_info.d1.goods_id);
+    //    printf("eggplat name is %s\n", info->allgoods_info.d1.goods_name);
+    //    printf("eggplat purchase price is %lf\n", info->allgoods_info.d1.purchase_price);
+    
     int capacity = getGoodsBagCapacity(info, 3);
     printf("Goods bag capacity is %d.\n", capacity);
     
