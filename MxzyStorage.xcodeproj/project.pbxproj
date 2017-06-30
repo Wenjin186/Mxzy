@@ -86,8 +86,8 @@
 		BC3774011F04B5AB008DA070 = {
 			isa = PBXGroup;
 			children = (
-				BC3774111F04B5C5008DA070 /* database */,
 				BC340DAF1F060EE300BCD4F0 /* db_test */,
+				BC3774111F04B5C5008DA070 /* database */,
 				BC37740B1F04B5AB008DA070 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -407,6 +407,7 @@
 				BC9681C61F06108100D0EAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
