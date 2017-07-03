@@ -109,6 +109,13 @@ int toReadData(FILE *fp, CharacterTable *table){
     return SUCCESS;
 }
 
+static void initFarmLand(CharacterRow *data){
+    for (int i = 0; i < LAND_ROW_MAX; i++) {
+        for (int j = 0; j < LAND_COLUMN_MAX; j++) {
+            
+        }
+    }
+};
 
 int setCharacterName(CharacterRow *row, const char *name){
     if (row == NULL || name == NULL) {
@@ -124,6 +131,57 @@ char *getCharacterName(CharacterRow *row){
     }
     return row->character_name;
 };
+
+int sowSeedToLand(CharacterRow *data, int seedId, int row, int column, GlobalInfo *info, int season){
+    //先判断播种的土地格数是不是大于土地总格数
+    if (row > LAND_ROW_MAX || column > LAND_COLUMN_MAX) {
+        return ERROR;
+    }
+    //再判断土地的类型是否可播种
+    if (data->island.finfo.land[row][column].land_type == LANDTYPE_BARREN) {
+        return ERROR;
+    }
+    
+    //再判断播种的种子的季节是不是当前季节的作物
+    int seedCheck = 0;
+    if (season == SPRING){
+        SpringSeedTable *seedTable =  (SpringSeedTable *)getSeasonSeedTable(info, season);
+        for (int i = 0 ; i<SPRINGSEEDTABLE_MAX; i++) {
+            if (seedId == seedTable->sd[i].seed_id) {
+                seedCheck = 1;
+                break;
+            }
+        }
+    }else if(season==SUMMER){
+        
+    }else if(season==FALL){
+        
+    }else if(season==WINTER){
+        
+    }else{
+        return ERROR;
+    }
+    
+    if (!seedCheck) {
+        return ERROR;
+    }
+    
+    //再判断该土地上是否有东西
+    if (data->island.finfo.land[row][column].il.stuff_id != 0) {
+        return ERROR;
+    }
+    
+    //检查完毕可以播种
+    data->island.finfo.land[row][column].il.stuff_id = seedId;
+    data->island.finfo.land[row][column].il.water_days = 0;
+    data->island.finfo.land[row][column].il.unwater_days = 0;
+    
+    return SUCCESS;
+};
+
+
+
+
 
 int createOrGetGlobalInfoFile(FILE **fpp, const char *path){
     if (path==NULL)

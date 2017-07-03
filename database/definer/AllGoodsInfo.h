@@ -14,6 +14,7 @@
 
 #define GOODSTYPE_SEED 1
 #define GOODSTYPE_GROWN 2
+#define GOODSTYPE_TRASH 3
 
 typedef struct goods_detail{
     int goods_id;

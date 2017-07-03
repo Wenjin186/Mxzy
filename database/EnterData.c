@@ -28,6 +28,14 @@ int enterDataForAllGoodsInfo(GlobalInfo *info){
     strcpy(info->allgoods_info.detail[1].goods_name, "eggplant");
     info->allgoods_info.detail[1].goods_type = GOODSTYPE_GROWN;
     
+    //杂草信息
+    info->allgoods_info.detail[2].goods_id = 601;
+    info->allgoods_info.detail[2].goods_max = 1;
+    info->allgoods_info.detail[2].purchase_price = 0;
+    info->allgoods_info.detail[2].sell_price = 0;
+    strcpy(info->allgoods_info.detail[2].goods_name, "grass");
+    info->allgoods_info.detail[2].goods_type = GOODSTYPE_TRASH;
+    
     
     
     return SUCCESS;

@@ -40,6 +40,18 @@ char *getCharacterName(CharacterRow *row);
 int toWriteData(FILE *fp, CharacterTable *table);
 int toReadData(FILE *fp, CharacterTable *table);
 
+static void initFarmLand(CharacterRow *data);
+
+//每天必须调用函数
+
+
+//播种
+int sowSeedToLand(CharacterRow *data, int seedId, int row, int column, GlobalInfo *info, int season);
+
+
+
+
+
 //GlobalInfo的有关函数
 int createOrGetGlobalInfoFile(FILE **fpp, const char *path);
 void closeGlobalInfoFile(FILE *fp);

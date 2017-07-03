@@ -53,6 +53,7 @@
 		BC37741D1F04B5C5008DA070 /* EnterData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterData.h; sourceTree = "<group>"; };
 		BC37741E1F04B5C5008DA070 /* MxzyDatabase.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxzyDatabase.c; sourceTree = "<group>"; };
 		BC37741F1F04B5C5008DA070 /* MxzyDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxzyDatabase.h; sourceTree = "<group>"; };
+		BC7D7C341F09F320002F760F /* FarmLandInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FarmLandInfo.h; sourceTree = "<group>"; };
 		BC9681C01F06108100D0EAEB /* db_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = db_test; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +143,7 @@
 				BC3774141F04B5C5008DA070 /* AllToolsInfo.h */,
 				BC3774171F04B5C5008DA070 /* CropTable.h */,
 				BC340DA91F060DEE00BCD4F0 /* Spring.h */,
+				BC7D7C341F09F320002F760F /* FarmLandInfo.h */,
 			);
 			name = GlobalInfo;
 			sourceTree = "<group>";

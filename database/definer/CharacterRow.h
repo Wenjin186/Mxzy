@@ -13,18 +13,36 @@
 #define FARM_NAME_LENGTH 20
 #define FISHERY_NAME_LENGTH 20
 #define PASTURE_NAME_LENGTH 20
+#define LAND_ROW_MAX 20
+#define LAND_COLUMN_MAX 30
+
+#define LANDTYPE_BARREN 1
+
+typedef struct inLand{
+    int stuff_id;
+    int water_days;
+    int unwater_days;
+}InLand;
+
+typedef struct land{
+    InLand il;
+    int land_type;
+}Land;
+
+typedef struct farmland_info{
+    Land land[LAND_ROW_MAX][LAND_COLUMN_MAX];
+}FarmLandInfo;
 
 
-typedef struct detail_table{
-    char farm_name[FARM_NAME_LENGTH];
-    char fishery_name[FISHERY_NAME_LENGTH];
-    char pasture_name[PASTURE_NAME_LENGTH];
-}DetailTable;
+typedef struct island_table{
+    FarmLandInfo finfo;
+}IslandTable;
+
 
 typedef struct character_row{
     int character_id;
     char character_name[CHARACTER_NAME_LENGTH];
-    DetailTable detailTable;
+    IslandTable island;
 }CharacterRow;
 
 #endif /* CharacterRow_h */
