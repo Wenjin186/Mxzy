@@ -15,8 +15,20 @@
 #define PASTURE_NAME_LENGTH 20
 #define LAND_ROW_MAX 20
 #define LAND_COLUMN_MAX 30
+#define GOODSBAG_MAX 30
 
 #define LANDTYPE_BARREN 1
+
+typedef struct goods{
+    int goods_id;
+    int amount;
+}_Goods;
+
+
+typedef struct goods_bag{
+    _Goods goods[GOODSBAG_MAX];
+    int bag_level;
+}_GoodsBag;
 
 typedef struct inLand{
     int stuff_id;
@@ -43,6 +55,7 @@ typedef struct character_row{
     int character_id;
     char character_name[CHARACTER_NAME_LENGTH];
     IslandTable island;
+    _GoodsBag bag;
 }CharacterRow;
 
 #endif /* CharacterRow_h */
